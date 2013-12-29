@@ -17,3 +17,5 @@
 
 # system files
 public/system/
+
+.DS_Store
