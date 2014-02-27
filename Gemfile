@@ -38,6 +38,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Server
+gem 'thin'
+
 gem "paperclip", "~> 3.0"
 # Handle active link. https://github.com/twg/active_link_to
 gem 'active_link_to'
@@ -57,7 +60,10 @@ gem 'handlebars-source', '~> 1.0.12'
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
+gem 'capistrano-rails', '~> 1.0.0', group: :development
+gem 'capistrano-bundler', group: :development
+gem 'capistrano-rvm', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
