@@ -1,16 +1,14 @@
 ---
-chdir: /usr/share/nginx/trenvenue/current
+chdir: /usr/share/nginx/trenvenue
 environment: production
-address: 0.0.0.0
-port: 3000
 timeout: 30
-log: /usr/share/nginx/trenvenue/shared/log/thin.log
-pid: /usr/share/nginx/trenvenue/shared/pids/thin.pid
+log: /usr/share/nginx/trenvenue/tmp/log/thin.log
+pid: /usr/share/nginx/trenvenue/tmp/pids/thin.pid
 socket: /usr/share/nginx/trenvenue/tmp/thin.sock
 max_conns: 1024
 max_persistent_conns: 100
 require: []
 wait: 30
-server: 4
+servers: 4
 threadpool_size: 20
 daemonize: true
