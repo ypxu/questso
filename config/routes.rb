@@ -1,6 +1,8 @@
 Questso::Application.routes.draw do
 
-  resources :posts  
+  resources :posts
+  put 'posts/:id/upvote', to: 'posts#upvote', constraints: {id: /\d+/}
+  put 'posts/:id/downvote', to: 'posts#downvote', constraints: {id: /\d+/}
 
   [:latest, :hot, :favorited, :read, :posted, :unread, :new, :trending, :fresh].each do |filter|
     get "#{filter}" => "list##{filter}"
@@ -15,7 +17,7 @@ Questso::Application.routes.draw do
   match "/signin", to: "users#signin", via: "get"
 
   resources :users
- 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,7 +58,7 @@ Questso::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
