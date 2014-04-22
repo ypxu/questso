@@ -16,6 +16,9 @@ Questso::Application.routes.draw do
   match "/signup", to: "users#signup", via: "get"
   match "/signin", to: "users#signin", via: "get"
 
+  get  'company/:name' => 'company#view'
+  get  'company/:name/edit' => 'company#edit'
+
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

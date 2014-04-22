@@ -1,0 +1,54 @@
+
+<div class="container main-container">
+	<div class="row">
+    <div class="col-md-3">
+      <%= image_tag @company.logo.url(:thumb), :class => "img-thumbnail", :height => "150", :width => "150" %>
+
+      <h4 class="page-header">General</h4>
+      <div>
+        <!--
+        <div style="display: inline-block"><a href="">Edit</a></div>
+        -->
+        <table>
+          <tr>
+            <td style="width: 100px"><h5>Website</h5></td>
+            <td><%= @company.homepage_url %></td>
+          </tr>
+          <tr>
+            <td style="width: 100px"><h5>Twitter</h5></td>
+            <td><a href="http://twitter.com/<%= @company.twitter_handle %>">@<%= @company.twitter_handle %></a> </td>
+          </tr>
+          <tr>
+            <td style="width: 100px"><h5>Employees</h5></td>
+            <td>999</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="page-header">Offices</h4>
+      <!--
+      <h4 class="page-header">Jobs</h4>
+      -->
+    </div>
+
+    <div class="col-md-6">
+      <h3 class="page-header"><%= @company.display_name %></h3>
+      <div><%= @company.overview.html_safe %></div>
+    
+      <h4 class="page-header">Team</h4>
+      <h4 class="page-header">Funding</h4>
+      <h4 class="page-header">Acquisitions</h4>
+      <h4 class="page-header">Competitors</h4>
+    </div>
+
+    <div class="col-md-3">
+      <h4 class="page-header">News</h4>
+    </div>
+
+  </div>
+</div>

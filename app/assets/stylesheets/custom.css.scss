@@ -13,7 +13,7 @@ max-width: 1050px;
 }
 
 .main-container{
-margin-top: -10px;
+//margin-top: -10px;
 }
 
 .afternav {
@@ -176,3 +176,26 @@ background: #CB1F27 url(asset-path('sharing-button.png')) -68px 0 no-repeat;
 .share  a.email {
 background: #00A256 url(asset-path('sharing-button.png')) -102px 0 no-repeat;
 }
+
+
+/*
+ * Placeholder dashboard ideas
+ *
+ * http://getbootstrap.com/examples/dashboard/ 
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+

@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230011018) do
+ActiveRecord::Schema.define(version: 20140330025539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: true do |t|
+    t.string   "name"
+    t.string   "display_name"
+    t.text     "overview"
+    t.string   "homepage_url"
+    t.string   "twitter_handle"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.integer  "number_of_employees"
+    t.integer  "founded_year"
+    t.integer  "founded_month"
+    t.integer  "founded_day"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.integer  "user_id"

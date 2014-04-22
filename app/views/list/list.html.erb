@@ -2,9 +2,22 @@
 <div class="container main-container" >
 
 	<div class="row">
-		<div id="post-collection" class="col-md-8" style="min-height: 1000px;">
+		<div id="post-collection" style="min-height: 1000px;">
 				
-			<%= render collection: @posts, partial: "post" %>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>*</th>
+            <th>Name</th>
+            <th>Url</th>
+            <th></th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+			    <%= render collection: @companies, partial: "company" %>
+        </tbody>
+      </table>
 
 			<script type="text/template" id="post-template">
 				<div class="row post-container">
@@ -69,17 +82,6 @@
 
 		</div>
 
-		<div class="col-md-4" style="margin-top: 20px; min-height: 1000px;">
-			<!-- Right-hand column -->
-			<!-- Ads columns, relavent posts-->
-
-      <div id="thumb-collection">
-
-        <%= render collection: @posts, partial: "thumb" %>
-
-      </div>
-
-		</div>
 	</div>
 	</div> <!-- /container -->
 
